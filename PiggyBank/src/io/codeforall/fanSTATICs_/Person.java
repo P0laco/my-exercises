@@ -30,11 +30,27 @@ public class Person {
             personWallet.walletMoney = personWallet.walletMoney + moneyToRetrieve;
             System.out.println("Your wallet now has " + personWallet.walletMoney + "€");
             System.out.println("Your bank now has "+ personBank.money + "€");
+            return;
         }
         if (moneyToRetrieve == 0){
             System.out.println("You have to insert a value to retrieve! Task not allowed");
         }
-
+        if (personBank.money < moneyToRetrieve){
+            System.out.println("You are trying to take too much money");
+            System.out.println("Your current Bank balance is " + personBank.money + "€");
+        }
+    }
+    public void moneyToUse(int walletMoney){
+        if (walletMoney == 0 ){
+            System.out.println("You arent trying to use any money, your balance has not changed!");
+        }else if (walletMoney > 0) {
+            personWallet.useWallet(walletMoney);
+        }else if (walletMoney < 0) {
+            System.out.println("You have to insert a valid amount!");
+        }
+    }
+    public void personBalance(){
+        System.out.println("At the moment you have " + personBank.money + "€ in your bank and " + personWallet.walletMoney + "€ in your wallet!");
     }
 
 

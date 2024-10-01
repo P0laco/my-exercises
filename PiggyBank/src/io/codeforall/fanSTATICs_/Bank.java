@@ -13,8 +13,7 @@ public class Bank {
     }
     public void takeMoney(int moneyToTake) {
         if (moneyToTake > money) {
-            System.out.println("You are trying to take too much money");
-            System.out.println("Your current Bank balance is " + money + "€");
+
         } else if (moneyToTake <= money) {
             System.out.println("You just took " + moneyToTake + "€ from your account");
             money = money - moneyToTake;
