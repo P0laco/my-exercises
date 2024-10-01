@@ -32,9 +32,6 @@ public class Ai {
         }
         return  arrays2;
     }
-    public int factorialIterative(int fatorial){
-
-    }
 
 }
 
