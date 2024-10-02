@@ -4,8 +4,8 @@ public class MagicLamp {
 
     public int numberOfGenies;
     private int geniesRemain;
-    private static int geniesGenerated;
-    private static int  rechargeUses;
+    public int geniesGenerated;
+    public int  rechargeUses;
 
     public MagicLamp(int numberOfGenies) {
         if (numberOfGenies < 0) {
@@ -18,12 +18,12 @@ public class MagicLamp {
     }
 
     public Genie invokeGenie() {
-        geniesGenerated++;
+        this.geniesGenerated++;
         if (numberOfGenies < 1) {
             System.out.println("You cant invoke until u change the amount of genies with lamp");
             return null;
         }
-        if (geniesGenerated > numberOfGenies && rechargeUses < 1) {
+        if (geniesGenerated > numberOfGenies) {
             System.out.println("Demon Created");
             return new RecycableDemon();
         }
@@ -35,14 +35,10 @@ public class MagicLamp {
         return new GrumpyGenie();
     }
 
-    public static boolean recycle(Genie genie) {
-        if (genie.getMaxWishes() != genie.getGrantedWishes()) {
-            genie.setGrantedWishes();
-            return true;
-        }
-        geniesGenerated = 0;
+    public Genie recycle(Genie genie) {
+        this.geniesGenerated = 0;
         rechargeUses++;
         System.out.println("Recycled");
-        return false;
+        return null;
     }
 }

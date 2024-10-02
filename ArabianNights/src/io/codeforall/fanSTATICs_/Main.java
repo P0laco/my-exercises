@@ -18,12 +18,17 @@ public class Main {
         lamp1.recycle(genie2);
         genie2.grantWish();
         System.out.println("==================");
-        /*Genie genie3 = lamp1.invokeGenie();
-        genie3.grantWish();
-        System.out.println("==================");*/
         Genie genie3 = lamp1.invokeGenie();
         genie3.grantWish();
         genie3.grantWish();
+        System.out.println("==================");
+        Genie genie4 = lamp1.invokeGenie();
+        genie4.grantWish();
+        genie4.grantWish();
+        System.out.println("====================");
+        Genie genie5 = lamp1.invokeGenie();
+        genie5.grantWish();
+        genie5.grantWish();
 
     }
 }

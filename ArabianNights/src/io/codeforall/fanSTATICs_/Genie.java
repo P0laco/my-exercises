@@ -9,9 +9,6 @@ public class Genie {
         this.maxWishes = maxWishes;
     }
 
-    public void setGrantedWishes(){
-        grantedWishes = Integer.MAX_VALUE;
-    }
     public int getGrantedWishes() {
         return grantedWishes;
     }

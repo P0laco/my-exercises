@@ -4,7 +4,7 @@ public class GrumpyGenie extends Genie {
 
     public GrumpyGenie() {
         super(1);
-    }
+}
 
     @Override
     public void grantWish() {
