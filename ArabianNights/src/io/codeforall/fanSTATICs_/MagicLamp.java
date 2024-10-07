@@ -35,10 +35,18 @@ public class MagicLamp {
         return new GrumpyGenie();
     }
 
-    public Genie recycle(Genie genie) {
+    public void recycle(RecycableDemon demon) {
         this.geniesGenerated = 0;
         rechargeUses++;
         System.out.println("Recycled");
-        return null;
+    }
+    public void compare(MagicLamp lamp){
+        if (this.numberOfGenies == lamp.numberOfGenies
+                && this.geniesRemain == lamp.geniesRemain
+                && this.rechargeUses == lamp.rechargeUses){
+            System.out.println("The lamps are the same!");
+            return;
+        }
+        System.out.println("Lamps are not the same!");
     }
 }
