@@ -3,11 +3,11 @@ package Hero;
 import Ability.Ability;
 
 public abstract class Hero implements Ability {
-    public  int baseDamage;
-    public int HP;
-    public int MP;
-    public int DEF;
 
+    public static int baseDamage;
+    public static int HP;
+    public static int MP;
+    public static int DEF;
     public String name;
 
     public Hero(int HP, int MP, int DEF, int baseDamage, String name) {
@@ -23,7 +23,7 @@ public abstract class Hero implements Ability {
     }
 
     public int takeDamage(int damage){
-        int damageTaken = Math.max(damage- DEF, 0);
+        int damageTaken = Math.max(damage - DEF, 0);
         HP -= damageTaken;
         return HP;
     }
@@ -31,4 +31,13 @@ public abstract class Hero implements Ability {
     public boolean isAlive(){
         return HP > 0;
     }
+
+    public int getHP(){
+        return HP;
+    }
+
+    public int getDEF(){
+        return DEF;
+    }
+
 }
