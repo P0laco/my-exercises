@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 @Controller
+
 public class ControllerServlet{
 
     @RequestMapping(method = RequestMethod.GET, value = "/index")
