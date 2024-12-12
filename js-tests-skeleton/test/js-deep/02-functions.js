@@ -30,6 +30,7 @@ describe('functions', function() {
         };
 
         var result = functionsAnswers.speak(speak, obj);
+        console.log("olas");
         expect(result).to.equal('Hello, Rui!!!');
         expect(called).to.be(true);
     });

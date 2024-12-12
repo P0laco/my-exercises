@@ -2,6 +2,8 @@
  * Return result of calling function with arguments as present in array
  */
 exports.argsAsArray = function(fn, arr) {
+    let [greet, name, punction] = arr;
+    return fn(greet, name, punction);
 };
 
 /**
@@ -9,12 +11,16 @@ exports.argsAsArray = function(fn, arr) {
  * for the implicit argument this
  */
 exports.speak = function(fn, obj) {
+    return fn.call(obj)
 };
 
 /**
  * Return a prefixer function that concatenates a string argument with a prefix
  */
 exports.stringPrefixer = function(prefix) {
+    return function (str) {
+        return prefix + str
+    }
 };
 
 /**

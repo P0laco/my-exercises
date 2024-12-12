@@ -40,7 +40,6 @@ describe('modules', function() {
         person.setAge(43);  
         person.age = 100;
         person.name = 'pedro';
-        console.log("ola");
         expect(person.getAge()).to.equal(43);
         expect(person.getName()).to.equal('rui');
     });
