@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaBank</title>
+</head>
+<body>
+    <h1>JavaBank</h1>
+    <h2>Customer Manager</h2>
+    <form action="index.html" id="form">
+        <div id="fName">
+            <label for="firstName">First Name:</label><br>
+            <input type="text" id="first" class="name"><br>
+        </div>
+        <div id="lName">
+            <label for="lastName">Last Name:</label><br>
+            <input type="text" id="last" class="name"><br>
+        </div>
+        <div id="mail">
+            <label for="email">Email:</label><br>
+            <input type="text" id="email"><br>
+        </div>
+        <div id="phones">
+            <label for="phone">Phone:</label><br>
+            <input type="text" id="phone"><br>
+        </div>
+    </form>
+        <div class="buttons">
+            <button id="add">Add</button>
+            <button type="reset" value="Delete" id="delete">Delete</button>
+            <button type="submit" value="Edit" id="edit">Edit</button>
+        </div>
+        <h1>Customer Information</h1>
+        <table id="customerTable">
+            <tbody id="customerInfo">
+            </tbody>
+        </table>
+    <script src="index.js"></script>
+</body>
+</html>
